@@ -18,19 +18,22 @@ def ej1():
     # el diccionario vacio debe llamarse "stock"
     
     # stock = ....
-
+    stock = {}
     # Luego de crear el diccionario completelo
     # con el siguiente stock:
+    stock["tornillos"] = 100
+    stock["tuercas"] = 150
+    stock["arandelas"] = 300
     # tornillos = 100
     # tuercas = 150
     # arandelas = 300
-
+    
     # Los nombres tornillos, tuercas y arandelas
     # son las claves (keys) del diccionario
     # mientras que las cantidades son los valores (values)
 
     # Una vez armado el diccionario imprimirlo en pantalla con print
-
+    print(stock)
     # Comenzar aquí, recuerde el identado dentro de esta funcion
 
 
@@ -40,12 +43,24 @@ def ej2():
     # como una base de datos. Comenzaremos con un diccionario de stock
     # de nuestros productos en cero:
     
-    strock = {'tornillos': 0, 'tuercas': 0, 'arandelas': 0}
+    stock = {'tornillos': 0, 'tuercas': 0, 'arandelas': 0}
 
     # Paso 1:
     # Crear un bucle utilizando while que se ejecute de forma infinita
     # while True.....
     
+    while True:  
+        print("Ingrese el material a mover (tornillos, tuercas ó arandelas), o fin para terminar")  
+        ingreso = input()
+        if ingreso.upper() == "FIN":
+            print("El stock final es:",stock)
+            break
+        elif ingreso in stock.keys():
+            stock[ingreso] += int(input("Ingrese la cantidad a ajustar\n"))
+            print("el nuevo stock es:",stock)
+        else:
+            print("ERROR!! Ingrese un material valido")
+        
     # Paso 2:
     # Dentro de ese bucle consultar al usuario por consola
     # que producto desea agregar al stock
@@ -72,3 +87,6 @@ if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     ej1()
     ej2()
+
+
+    

@@ -9,7 +9,7 @@ import csv
 
 def read_csv():
     # Abrir un archivo CSV
-    csvfile = open('edificio.csv')
+    csvfile = open('edificio2.csv')
     # Leer todos los datos y almacenarlos en una 
     # lista de diccionarios
     edificio = list(csv.DictReader(csvfile))
@@ -20,9 +20,9 @@ def read_csv():
         print(piso['a'])
 
     csvfile.close()
-
+    #propiedades.csv
     # Abrir un archivo CSV con with open
-    with open('propiedades.csv') as csvfile:
+    with open('edificio2.csv') as csvfile:
         # Leer todos los datos y almacenarlos en una 
         # lista de diccionarios
         data = list(csv.DictReader(csvfile))
